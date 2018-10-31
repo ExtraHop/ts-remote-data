@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "target": "es6",
+        "lib": ["es2016", "es2016.array.include"]
+    }
+}

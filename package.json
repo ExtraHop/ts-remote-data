@@ -1,0 +1,21 @@
+{
+    "name": "ts-remote-data",
+    "version": "1.0.0",
+    "description": "Utility type for working with snapshot views of asynchronously-available data",
+    "author": {
+        "name": "Ted Driggs",
+        "email": "t.driggs@extrahop.com"
+    },
+    "main": "index.ts",
+    "license": "BSD-2-Clause",
+    "homepage": "https://github.com/ExtraHop/ts-remote-data",
+    "devDependencies": {
+        "typescript": "^3.4.3"
+    },
+    "repository": "github:ExtraHop/ts-remote-data",
+    "keywords": [
+        "remote",
+        "async",
+        "fetch"
+    ]
+}
