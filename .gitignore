@@ -1,4 +1,5 @@
 node_modules/**
+/lib
 
 # macOS Ignores
 # https://github.com/github/gitignore/blob/master/Global/macOS.gitignore
