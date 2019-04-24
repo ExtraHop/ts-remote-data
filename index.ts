@@ -1,3 +1,8 @@
+// COPYRIGHT 2019 BY EXTRAHOP NETWORKS, INC.
+//
+// This file is subject to the terms and conditions defined in
+// file 'LICENSE', which is part of this source code package.
+
 // Establish constants for the different not-loaded states. Explicit types are
 // used so these can be exported via `RemoteData` without being generalized
 // to `string`.
