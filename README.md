@@ -3,6 +3,8 @@
 `ts-remote-data` provides a data type and helper functions for representing asynchronously-available data in a React component, Redux store, or anywhere that you need to have a view of a Promise or other async operation at a moment in time.
 Declaring properties as `RemoteData<T>` allows you to avoid passing around separate `isFooLoading` and `fooError` properties, and requires you to put guards in before reading that value so you don't have to remember to add it.
 
+This package is inspired by Elm's [`RemoteData`](https://github.com/krisajenkins/remotedata), which solves the same problem.
+
 ## Example
 
 ```typescript
