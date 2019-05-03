@@ -82,7 +82,7 @@ const RemoteData = {
      * failure, but they may do so if it is contextually appropriate.
      */
     isFailure: <T>(rd: RemoteData<T>): rd is RemoteDataFailure =>
-        typeof rd === 'object' &&
+        typeof rd === 'object' && rd !== null &&
         Object.prototype.hasOwnProperty.bind(rd, FAILURE_PROPERTY)(),
     /**
      * Check if some remote data is available. This function acts as a type
