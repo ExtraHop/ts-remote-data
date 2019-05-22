@@ -1,6 +1,6 @@
 {
     "name": "ts-remote-data",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "description": "Utility type for working with snapshot views of asynchronously-available data",
     "author": {
         "name": "Ted Driggs",
