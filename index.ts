@@ -90,9 +90,16 @@ const RemoteData = {
      * guard; if it returns `true` then `remoteData` can now be used as a `T`.
      */
     isReady: <T>(remoteData: RemoteData<T>): remoteData is T =>
-        remoteData !== NOT_ASKED &&
-        remoteData !== LOADING &&
-        !RemoteData.isFailure(remoteData),
+        RemoteData.isSettled(remoteData) && !RemoteData.isFailure(remoteData),
+    /**
+     * Check if some remote data is ready or in the failure state. The term
+     * "settled" comes from Promises, where it means "fulfilled or rejected".
+     * This function acts as a type guard.
+     */
+    isSettled: <T>(
+        remoteData: RemoteData<T>,
+    ): remoteData is T | RemoteDataFailure =>
+        remoteData !== NOT_ASKED && remoteData !== LOADING,
     /**
      * Check if some remote data is ready; if so return it, otherwise return
      * `undefined`. This can be used with `||` to create a short-circuiting
@@ -106,6 +113,13 @@ const RemoteData = {
      */
     asFailure: <T>(rd: RemoteData<T>): RemoteDataFailure | undefined =>
         RemoteData.isFailure(rd) ? rd : undefined,
+    /**
+     * Check if some remote data has settled; if so return the value or the
+     * failure. The term "settled" come from Promises, where it means
+     * "fulfilled or rejected".
+     */
+    asSettled: <T>(rd: RemoteData<T>): T | RemoteDataFailure | undefined =>
+        RemoteData.isSettled(rd) ? rd : undefined,
     /**
      * Get the value of some remote data if available, otherwise return a
      * specified fallback value.
