@@ -160,6 +160,13 @@ const RemoteData = {
         RemoteData.isReady(remoteData) ? mapFn(remoteData) : remoteData,
 
     /**
+     * Recover from a failure by using a fallback value, otherwise
+     * returning the passed in remote data.
+     */
+    recover: <T>(remoteData: RemoteData<T>, fallback: T): RemoteData<T> =>
+        RemoteData.isFailure(remoteData) ? fallback : remoteData,
+
+    /**
      * Checks if all the input `RemoteData` are ready, and if so
      * returns an array of the values. Otherwise, it returns a single
      * status, in the following priority order:
