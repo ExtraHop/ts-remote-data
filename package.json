@@ -1,6 +1,6 @@
 {
     "name": "ts-remote-data",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "Utility type for working with snapshot views of asynchronously-available data",
     "author": {
         "name": "Ted Driggs",
@@ -11,10 +11,16 @@
     "license": "BSD-2-Clause",
     "homepage": "https://github.com/ExtraHop/ts-remote-data",
     "scripts": {
-        "build": "tsc"
+        "build": "webpack"
     },
     "devDependencies": {
-        "typescript": "^3.4.3"
+        "@babel/core": "^7.4.5",
+        "@babel/preset-env": "^7.4.5",
+        "@babel/preset-typescript": "^7.3.3",
+        "babel-loader": "^8.0.6",
+        "typescript": "^3.4.3",
+        "webpack": "^4.32.2",
+        "webpack-cli": "^3.3.2"
     },
     "repository": "github:ExtraHop/ts-remote-data",
     "keywords": [
