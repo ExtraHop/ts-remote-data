@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.1.2 (Aug 13, 2019)
+
+### Fixes
+
+- Upgraded Lodash from 4.17.11 to 4.17.14 to handle vulnerability [CVE-2019-10744](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-10744)
+
+## 1.1.1 (Jun 4, 2019)
+
+### Fixes
+
+- The JavaScript code is now compiled as ES5, so that it works in older browsers
+
 ## 1.1.0 (May 22, 2019)
 
 ### New Features
