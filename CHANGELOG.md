@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.3 (Feb 25, 2020)
+
+### Fixes
+
+- Added back missing TypeScript declaration files (broken in 1.1.1) [#9](https://github.com/ExtraHop/ts-remote-data/issues/9)
+
 ## 1.1.2 (Aug 13, 2019)
 
 ### Fixes
