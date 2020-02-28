@@ -11,8 +11,8 @@
     "license": "BSD-2-Clause",
     "homepage": "https://github.com/ExtraHop/ts-remote-data",
     "scripts": {
-        "build": "webpack",
-        "prepare": "tsc && npm run build"
+        "build": "tsc",
+        "prepare": "npm run build"
     },
     "devDependencies": {
         "@babel/core": "^7.4.5",
