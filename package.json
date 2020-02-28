@@ -15,13 +15,7 @@
         "prepare": "npm run build"
     },
     "devDependencies": {
-        "@babel/core": "^7.4.5",
-        "@babel/preset-env": "^7.4.5",
-        "@babel/preset-typescript": "^7.3.3",
-        "babel-loader": "^8.0.6",
-        "typescript": "^3.4.3",
-        "webpack": "^4.32.2",
-        "webpack-cli": "^3.3.2"
+        "typescript": "^3.4.3"
     },
     "repository": "github:ExtraHop/ts-remote-data",
     "keywords": [
