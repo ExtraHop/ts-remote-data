@@ -15,7 +15,7 @@
         "prepare": "npm run build"
     },
     "devDependencies": {
-        "typescript": "^3.4.3"
+        "typescript": "^3.8.2",
     },
     "repository": "github:ExtraHop/ts-remote-data",
     "keywords": [
@@ -23,5 +23,7 @@
         "async",
         "fetch"
     ],
-    "files": ["lib/**/*"]
+    "files": [
+        "lib/**/*"
+    ]
 }
