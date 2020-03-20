@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.4 (Mar 20, 2020)
+
+### Fixes
+
+- The default export from the library is no longer an empty object. This issue was caused by an incorrect build configuration introduced in 1.1.1.
+
 ## 1.1.3 (Feb 25, 2020)
 
 ### Fixes
