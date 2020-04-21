@@ -160,6 +160,31 @@ const RemoteData = {
         RemoteData.isReady(remoteData) ? mapFn(remoteData) : remoteData,
 
     /**
+     * Apply a transform function to a remote data array's members if the
+     * array is ready, otherwise return the current value.
+     *
+     * This is logically equivalent to `RemoteData.map(v, v => v.map(mapFn))`.
+     */
+    mapEach: <T, U>(
+        remoteData: RemoteData<readonly T[]>,
+        mapFn: (value: T, index: number, array: readonly T[]) => U,
+    ): RemoteData<U[]> =>
+        RemoteData.isReady(remoteData) ? remoteData.map(mapFn) : remoteData,
+
+    /**
+     * Get a single field from a remote data value if it is ready.
+     */
+    pluck: <T, K extends keyof T>(
+        remoteData: RemoteData<T>,
+        field: K,
+    ): RemoteData<T[K]> =>
+        // Note that we don't call map() here since we don't want to create an
+        // unnecessary closure. The performance gain is probably tiny, but a
+        // widely-used function like this is the sort of place where it might
+        // actually make a difference.
+        RemoteData.isReady(remoteData) ? remoteData[field] : remoteData,
+
+    /**
      * Recover from a failure by using a fallback value, otherwise
      * returning the passed in remote data.
      */
